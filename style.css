@@ -1,0 +1,263 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	color: inherit;
+	font-family: inherit;
+	text-decoration: inherit;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+	line-height: 1.25;
+	color: #333;
+	min-height: 100vh;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+button {
+	width: max-content;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+}
+
+.nav-mobile {
+	display: none;
+}
+
+button:hover {
+	cursor: pointer;
+	scale: 1.05;
+}
+
+/* at 1200px --------------------------------------------------------*/
+
+.container {
+	max-width: 1000px;
+	margin: auto;
+}
+
+/* header ------------------------------------------ */
+
+header,
+header ul,
+nav {
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header {
+	padding: 1rem;
+}
+
+header h2 {
+	color: #085ad0;
+}
+
+header ul {
+	list-style: none;
+}
+
+header li:hover {
+	text-decoration: underline;
+	text-underline-offset: 0.5rem;
+}
+
+nav button {
+	color: white;
+	background-color: #085ad0;
+	padding: 0.5rem 1rem;
+}
+
+/* main -------------------------------------- */
+
+main {
+	padding-bottom: 2rem;
+}
+
+/* hero section */
+
+.hero-section {
+	background: url(img/1.jpg) no-repeat;
+	background-size: cover;
+	background-position: center right;
+}
+
+.hero-section .container {
+	display: grid;
+	gap: 1rem;
+	color: yellow;
+	padding: 4rem;
+}
+
+.hero-section ul {
+	display: flex;
+	gap: 1rem;
+}
+
+.hero-section li {
+	margin-left: 0.8rem;
+}
+
+.hero-section li:first-of-type {
+	list-style: none;
+	margin-left: 0;
+}
+
+.hero-section button {
+	color: #085ad0;
+	background-color:white;
+	padding: 0.5rem 1rem;
+	margin-top: 0.5rem;
+}
+
+/* about section */
+.about-section {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	gap: 1rem;
+	padding: 1.5rem;
+}
+
+.about-section .about-image-box {
+	max-width: 300px;
+	height: 100%;
+}
+
+.about-image-box img {
+	border-radius: 10px;
+	object-fit: cover;
+	height: 100%;
+}
+
+.about-section .about-text-box {
+	display: grid;
+	gap: 0.5rem;
+	padding: 1rem 0;
+}
+
+.about-text-box button {
+	color: white;
+	background-color: #085ad0;
+	margin-top: 0.5rem;
+	padding: 0.5rem 1rem;
+}
+
+/* services section */
+
+.services-section {
+	text-align: center;
+}
+
+.services-heading-box,
+.services-cards-box {
+	padding: 1rem;
+}
+
+.services-cards-box {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 1rem;
+}
+
+.card {
+	display: grid;
+	border: #3333333a 1px solid;
+	border-radius: 10px;
+	padding: 2rem 1rem;
+	gap: 1rem;
+}
+
+.fa-desktop,
+.fa-rocket,
+.fa-signal {
+	width: 2rem;
+	height: 2rem;
+	padding: 1rem;
+	color: white;
+	background-color: #085ad0;
+	border-radius: 50%;
+	margin: auto;
+}
+
+.fa-rocket {
+	background-color: #478733;
+}
+
+.fa-signal {
+	background-color: #f57f13;
+}
+
+/* at 768px --------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+	/* header--------------------- */
+	.nav-pc {
+		display: none;
+	}
+
+	.nav-mobile {
+		display: block;
+		font-size: 1.5rem;
+		cursor: pointer;
+	}
+
+	/* main-------------------------- */
+	/* hero section */
+	.hero-section .container {
+		justify-content: center;
+		text-align: center;
+	}
+
+	.hero-section ul {
+		justify-content: center;
+	}
+	.hero-section button {
+		margin: auto;
+		margin-top: 0.5rem;
+	}
+	/* services section */
+	.services-cards-box {
+		grid-template-columns: auto auto;
+	}
+	.services-cards-box .card:last-of-type {
+		grid-column: span 2;
+	}
+}
+
+/* at 576px --------------------------------------------------------*/
+@media screen and (max-width: 576px) {
+	/* main-------------------------- */
+	/* about section */
+	.about-section {
+		grid-template-columns: auto;
+	}
+	/* services section */
+	.services-cards-box {
+		grid-template-columns: auto;
+	}
+	.about-section .about-image-box {
+		margin: auto;
+	}
+	.about-section .about-text-box {
+		text-align: center;
+	}
+	.about-section .about-text-box button {
+		margin: auto;
+		margin-top: 0.5rem;
+	}
+	.services-cards-box .card:last-of-type {
+		grid-column: span 1;
+	}
+}
